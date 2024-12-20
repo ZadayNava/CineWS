@@ -11,9 +11,9 @@
                 <div class="form-group">
                     <asp:Label ID="Nombre" runat="server" Text="Nombre"></asp:Label>
                     <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:Label ID="TipoSala" runat="server" Text="Tipo Sala"></asp:Label>
-                    <asp:TextBox ID="txtTipoSala" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:Label ID="Asientos_ID" runat="server" Text="Asiento ID"></asp:Label>>
+                    <asp:Label ID="TipoSala" runat="server" Text="Tipo de Sala"></asp:Label>
+                    <asp:TextBox ID="txtTipoSala" runat="server" CssClass="form-control"></asp:TextBox>                  
+                    <asp:Label ID="lblAsientos_ID" runat="server" Text="Asientos_ID"></asp:Label>  
                     <asp:TextBox ID="txtIdAsiento" runat="server" CssClass="form-control"></asp:TextBox>
                     <asp:Button ID="btngurdar" CssClass="btn btn-primary" runat="server" Text="Guardar" OnClick="btngurdar_Click" />
                 </div>

@@ -101,6 +101,20 @@ namespace CineWS.GeneroService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetGenero", ReplyAction="*")]
         System.Threading.Tasks.Task<CineWS.GeneroService.GetGeneroResponse> GetGeneroAsync(CineWS.GeneroService.GetGeneroRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetGeneroxIDResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetGeneroxID", ReplyAction="*")]
+        CineWS.GeneroService.GetGeneroxIDResponse GetGeneroxID(CineWS.GeneroService.GetGeneroxIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetGeneroxID", ReplyAction="*")]
+        System.Threading.Tasks.Task<CineWS.GeneroService.GetGeneroxIDResponse> GetGeneroxIDAsync(CineWS.GeneroService.GetGeneroxIDRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento id del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateGenero", ReplyAction="*")]
+        CineWS.GeneroService.UpdateGeneroResponse UpdateGenero(CineWS.GeneroService.UpdateGeneroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateGenero", ReplyAction="*")]
+        System.Threading.Tasks.Task<CineWS.GeneroService.UpdateGeneroResponse> UpdateGeneroAsync(CineWS.GeneroService.UpdateGeneroRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Delete_GeneroResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Delete_Genero", ReplyAction="*")]
         CineWS.GeneroService.Delete_GeneroResponse Delete_Genero(CineWS.GeneroService.Delete_GeneroRequest request);
@@ -249,6 +263,142 @@ namespace CineWS.GeneroService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetGeneroxIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetGeneroxID", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.GeneroService.GetGeneroxIDRequestBody Body;
+        
+        public GetGeneroxIDRequest() {
+        }
+        
+        public GetGeneroxIDRequest(CineWS.GeneroService.GetGeneroxIDRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetGeneroxIDRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public GetGeneroxIDRequestBody() {
+        }
+        
+        public GetGeneroxIDRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetGeneroxIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetGeneroxIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.GeneroService.GetGeneroxIDResponseBody Body;
+        
+        public GetGeneroxIDResponse() {
+        }
+        
+        public GetGeneroxIDResponse(CineWS.GeneroService.GetGeneroxIDResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetGeneroxIDResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CineWS.GeneroService.GeneroPelicula_VO GetGeneroxIDResult;
+        
+        public GetGeneroxIDResponseBody() {
+        }
+        
+        public GetGeneroxIDResponseBody(CineWS.GeneroService.GeneroPelicula_VO GetGeneroxIDResult) {
+            this.GetGeneroxIDResult = GetGeneroxIDResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateGeneroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateGenero", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.GeneroService.UpdateGeneroRequestBody Body;
+        
+        public UpdateGeneroRequest() {
+        }
+        
+        public UpdateGeneroRequest(CineWS.GeneroService.UpdateGeneroRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateGeneroRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CineWS.GeneroService.GeneroPelicula_VO id;
+        
+        public UpdateGeneroRequestBody() {
+        }
+        
+        public UpdateGeneroRequestBody(CineWS.GeneroService.GeneroPelicula_VO id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateGeneroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateGeneroResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.GeneroService.UpdateGeneroResponseBody Body;
+        
+        public UpdateGeneroResponse() {
+        }
+        
+        public UpdateGeneroResponse(CineWS.GeneroService.UpdateGeneroResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateGeneroResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string UpdateGeneroResult;
+        
+        public UpdateGeneroResponseBody() {
+        }
+        
+        public UpdateGeneroResponseBody(string UpdateGeneroResult) {
+            this.UpdateGeneroResult = UpdateGeneroResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class Delete_GeneroRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="Delete_Genero", Namespace="http://tempuri.org/", Order=0)]
@@ -388,6 +538,56 @@ namespace CineWS.GeneroService {
             inValue.Body = new CineWS.GeneroService.GetGeneroRequestBody();
             inValue.Body.parametros = parametros;
             return ((CineWS.GeneroService.GeneroServiceSoap)(this)).GetGeneroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CineWS.GeneroService.GetGeneroxIDResponse CineWS.GeneroService.GeneroServiceSoap.GetGeneroxID(CineWS.GeneroService.GetGeneroxIDRequest request) {
+            return base.Channel.GetGeneroxID(request);
+        }
+        
+        public CineWS.GeneroService.GeneroPelicula_VO GetGeneroxID(int id) {
+            CineWS.GeneroService.GetGeneroxIDRequest inValue = new CineWS.GeneroService.GetGeneroxIDRequest();
+            inValue.Body = new CineWS.GeneroService.GetGeneroxIDRequestBody();
+            inValue.Body.id = id;
+            CineWS.GeneroService.GetGeneroxIDResponse retVal = ((CineWS.GeneroService.GeneroServiceSoap)(this)).GetGeneroxID(inValue);
+            return retVal.Body.GetGeneroxIDResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CineWS.GeneroService.GetGeneroxIDResponse> CineWS.GeneroService.GeneroServiceSoap.GetGeneroxIDAsync(CineWS.GeneroService.GetGeneroxIDRequest request) {
+            return base.Channel.GetGeneroxIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CineWS.GeneroService.GetGeneroxIDResponse> GetGeneroxIDAsync(int id) {
+            CineWS.GeneroService.GetGeneroxIDRequest inValue = new CineWS.GeneroService.GetGeneroxIDRequest();
+            inValue.Body = new CineWS.GeneroService.GetGeneroxIDRequestBody();
+            inValue.Body.id = id;
+            return ((CineWS.GeneroService.GeneroServiceSoap)(this)).GetGeneroxIDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CineWS.GeneroService.UpdateGeneroResponse CineWS.GeneroService.GeneroServiceSoap.UpdateGenero(CineWS.GeneroService.UpdateGeneroRequest request) {
+            return base.Channel.UpdateGenero(request);
+        }
+        
+        public string UpdateGenero(CineWS.GeneroService.GeneroPelicula_VO id) {
+            CineWS.GeneroService.UpdateGeneroRequest inValue = new CineWS.GeneroService.UpdateGeneroRequest();
+            inValue.Body = new CineWS.GeneroService.UpdateGeneroRequestBody();
+            inValue.Body.id = id;
+            CineWS.GeneroService.UpdateGeneroResponse retVal = ((CineWS.GeneroService.GeneroServiceSoap)(this)).UpdateGenero(inValue);
+            return retVal.Body.UpdateGeneroResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CineWS.GeneroService.UpdateGeneroResponse> CineWS.GeneroService.GeneroServiceSoap.UpdateGeneroAsync(CineWS.GeneroService.UpdateGeneroRequest request) {
+            return base.Channel.UpdateGeneroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CineWS.GeneroService.UpdateGeneroResponse> UpdateGeneroAsync(CineWS.GeneroService.GeneroPelicula_VO id) {
+            CineWS.GeneroService.UpdateGeneroRequest inValue = new CineWS.GeneroService.UpdateGeneroRequest();
+            inValue.Body = new CineWS.GeneroService.UpdateGeneroRequestBody();
+            inValue.Body.id = id;
+            return ((CineWS.GeneroService.GeneroServiceSoap)(this)).UpdateGeneroAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -132,6 +132,20 @@ namespace CineWS.SalaService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Delete_Sala", ReplyAction="*")]
         System.Threading.Tasks.Task<CineWS.SalaService.Delete_SalaResponse> Delete_SalaAsync(CineWS.SalaService.Delete_SalaRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento GetSalaxIDResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSalaxID", ReplyAction="*")]
+        CineWS.SalaService.GetSalaxIDResponse GetSalaxID(CineWS.SalaService.GetSalaxIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSalaxID", ReplyAction="*")]
+        System.Threading.Tasks.Task<CineWS.SalaService.GetSalaxIDResponse> GetSalaxIDAsync(CineWS.SalaService.GetSalaxIDRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento id del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSala", ReplyAction="*")]
+        CineWS.SalaService.UpdateSalaResponse UpdateSala(CineWS.SalaService.UpdateSalaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSala", ReplyAction="*")]
+        System.Threading.Tasks.Task<CineWS.SalaService.UpdateSalaResponse> UpdateSalaAsync(CineWS.SalaService.UpdateSalaRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento sala del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insert_Sala", ReplyAction="*")]
         CineWS.SalaService.Insert_SalaResponse Insert_Sala(CineWS.SalaService.Insert_SalaRequest request);
@@ -280,6 +294,142 @@ namespace CineWS.SalaService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSalaxIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSalaxID", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.SalaService.GetSalaxIDRequestBody Body;
+        
+        public GetSalaxIDRequest() {
+        }
+        
+        public GetSalaxIDRequest(CineWS.SalaService.GetSalaxIDRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSalaxIDRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public GetSalaxIDRequestBody() {
+        }
+        
+        public GetSalaxIDRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSalaxIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSalaxIDResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.SalaService.GetSalaxIDResponseBody Body;
+        
+        public GetSalaxIDResponse() {
+        }
+        
+        public GetSalaxIDResponse(CineWS.SalaService.GetSalaxIDResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSalaxIDResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CineWS.SalaService.Sala_VO GetSalaxIDResult;
+        
+        public GetSalaxIDResponseBody() {
+        }
+        
+        public GetSalaxIDResponseBody(CineWS.SalaService.Sala_VO GetSalaxIDResult) {
+            this.GetSalaxIDResult = GetSalaxIDResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateSalaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateSala", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.SalaService.UpdateSalaRequestBody Body;
+        
+        public UpdateSalaRequest() {
+        }
+        
+        public UpdateSalaRequest(CineWS.SalaService.UpdateSalaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateSalaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CineWS.SalaService.Sala_VO id;
+        
+        public UpdateSalaRequestBody() {
+        }
+        
+        public UpdateSalaRequestBody(CineWS.SalaService.Sala_VO id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateSalaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateSalaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CineWS.SalaService.UpdateSalaResponseBody Body;
+        
+        public UpdateSalaResponse() {
+        }
+        
+        public UpdateSalaResponse(CineWS.SalaService.UpdateSalaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateSalaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string UpdateSalaResult;
+        
+        public UpdateSalaResponseBody() {
+        }
+        
+        public UpdateSalaResponseBody(string UpdateSalaResult) {
+            this.UpdateSalaResult = UpdateSalaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class Insert_SalaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="Insert_Sala", Namespace="http://tempuri.org/", Order=0)]
@@ -419,6 +569,56 @@ namespace CineWS.SalaService {
             inValue.Body = new CineWS.SalaService.Delete_SalaRequestBody();
             inValue.Body.id = id;
             return ((CineWS.SalaService.SalaServiceSoap)(this)).Delete_SalaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CineWS.SalaService.GetSalaxIDResponse CineWS.SalaService.SalaServiceSoap.GetSalaxID(CineWS.SalaService.GetSalaxIDRequest request) {
+            return base.Channel.GetSalaxID(request);
+        }
+        
+        public CineWS.SalaService.Sala_VO GetSalaxID(int id) {
+            CineWS.SalaService.GetSalaxIDRequest inValue = new CineWS.SalaService.GetSalaxIDRequest();
+            inValue.Body = new CineWS.SalaService.GetSalaxIDRequestBody();
+            inValue.Body.id = id;
+            CineWS.SalaService.GetSalaxIDResponse retVal = ((CineWS.SalaService.SalaServiceSoap)(this)).GetSalaxID(inValue);
+            return retVal.Body.GetSalaxIDResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CineWS.SalaService.GetSalaxIDResponse> CineWS.SalaService.SalaServiceSoap.GetSalaxIDAsync(CineWS.SalaService.GetSalaxIDRequest request) {
+            return base.Channel.GetSalaxIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CineWS.SalaService.GetSalaxIDResponse> GetSalaxIDAsync(int id) {
+            CineWS.SalaService.GetSalaxIDRequest inValue = new CineWS.SalaService.GetSalaxIDRequest();
+            inValue.Body = new CineWS.SalaService.GetSalaxIDRequestBody();
+            inValue.Body.id = id;
+            return ((CineWS.SalaService.SalaServiceSoap)(this)).GetSalaxIDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CineWS.SalaService.UpdateSalaResponse CineWS.SalaService.SalaServiceSoap.UpdateSala(CineWS.SalaService.UpdateSalaRequest request) {
+            return base.Channel.UpdateSala(request);
+        }
+        
+        public string UpdateSala(CineWS.SalaService.Sala_VO id) {
+            CineWS.SalaService.UpdateSalaRequest inValue = new CineWS.SalaService.UpdateSalaRequest();
+            inValue.Body = new CineWS.SalaService.UpdateSalaRequestBody();
+            inValue.Body.id = id;
+            CineWS.SalaService.UpdateSalaResponse retVal = ((CineWS.SalaService.SalaServiceSoap)(this)).UpdateSala(inValue);
+            return retVal.Body.UpdateSalaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CineWS.SalaService.UpdateSalaResponse> CineWS.SalaService.SalaServiceSoap.UpdateSalaAsync(CineWS.SalaService.UpdateSalaRequest request) {
+            return base.Channel.UpdateSalaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CineWS.SalaService.UpdateSalaResponse> UpdateSalaAsync(CineWS.SalaService.Sala_VO id) {
+            CineWS.SalaService.UpdateSalaRequest inValue = new CineWS.SalaService.UpdateSalaRequest();
+            inValue.Body = new CineWS.SalaService.UpdateSalaRequestBody();
+            inValue.Body.id = id;
+            return ((CineWS.SalaService.SalaServiceSoap)(this)).UpdateSalaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

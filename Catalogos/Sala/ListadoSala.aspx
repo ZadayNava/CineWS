@@ -3,9 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <h3>Listado de Sala</h3>
-        <p>
-            <asp:Button ID="Insertar" runat="server" Text="Agregar" CssClass="btn btn-primary btn-xs" Width="85px" OnClick="Insertar_Click" />
-        </p>
     </div>
     <div class="row">
         <asp:GridView ID="GVSala" runat="server"
@@ -19,6 +16,7 @@
                 <asp:BoundField DataField="Id_Sala" HeaderText="Numero de Genero" ItemStyle-Width="50px" ReadOnly="true" />
                 <asp:BoundField DataField="NomSala" HeaderText="Sala" ItemStyle-Width="50px" />
                 <asp:BoundField DataField="TipoSala" HeaderText="Tipo Sala" ItemStyle-Width="50px" />
+                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Modificar" Text="Editar" ControlStyle-CssClass="btn btn-primary btn-xs" ItemStyle-Width="50px" />
                 <asp:CommandField ButtonType="Button" HeaderText="Eliminar" ShowDeleteButton="true" ShowHeader="true" ControlStyle-CssClass="btn btn-danger btn-xs" ItemStyle-Width="50px" />
             </Columns>
         </asp:GridView>

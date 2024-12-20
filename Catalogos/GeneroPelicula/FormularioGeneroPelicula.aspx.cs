@@ -1,4 +1,5 @@
 ﻿using CineWS.GeneroService;
+using CineWS.SalaService;
 using CineWS.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,29 @@ namespace CineWS.Catalogos.GeneroPelicula
 
             if (!IsPostBack)
             {
-                //voy a insertar
-                Titulo.Text = "Agregar nuevo genero";
+                if (Request.QueryString["Id"] != null)
+                {
+                    int id_gen = int.Parse(Request.QueryString["Id"].ToString());
+                    GeneroPelicula_VO _gen = Genero_WS.GetGeneroxID(id_gen);
+
+                    if (_gen.Id_Genero != null)
+                    {
+                        //Relleno el formulario
+                        Titulo.Text = "Actualizar Genero";
+                        txtNombre.Text = _gen.Nombre_Genero.ToString();
+                    }
+                    else
+                    {
+                        //sweet alert
+                        SweetAlert.Sweet_Alert("Ops...", "No pudimos encontrar el objeto que buscas", "info", this.Page, this.GetType(), "~/Catalogos/GeneroPelicula/ListadoGenero.aspx");
+                    }
+                }
+                else
+                {
+                    //voy a insertar
+                    Titulo.Text = "Agregar nuevo genero";
+
+                }
             }
         }
 
@@ -33,8 +55,18 @@ namespace CineWS.Catalogos.GeneroPelicula
             {
                 //asigno mis valores del formulario al objeto
                 _genero.Nombre_Genero = txtNombre.Text;
-                //voy a insertar
-                respuesta = Genero_WS.Insert_Genero(_genero);
+                //valido si voy a insertar o a actualizar
+                if (Request.QueryString["Id"] != null)
+                {
+                    //voy a actualizar
+                    _genero.Id_Genero = int.Parse(Request.QueryString["Id"]);
+                    respuesta = Genero_WS.UpdateGenero(_genero);
+                }
+                else
+                {
+                    //voy a insertar
+                    respuesta = Genero_WS.Insert_Genero(_genero);
+                }
                 //Preparo mis sweet alert
                 if (respuesta.ToUpper().Contains("ERROR"))
                 {

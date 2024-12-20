@@ -118,6 +118,12 @@
     <Content Include="Connected Services\GeneroService\CineWS.GeneroService.Insert_GeneroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\GeneroService\CineWS.GeneroService.GetGeneroxIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GeneroService\CineWS.GeneroService.UpdateGeneroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\GeneroService\GeneroService.disco" />
     <None Include="Connected Services\GeneroService\configuration91.svcinfo" />
     <None Include="Connected Services\GeneroService\configuration.svcinfo" />
@@ -135,6 +141,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\SalaService\CineWS.SalaService.Sala_VO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalaService\CineWS.SalaService.GetSalaxIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SalaService\CineWS.SalaService.UpdateSalaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\SalaService\SalaService.disco" />

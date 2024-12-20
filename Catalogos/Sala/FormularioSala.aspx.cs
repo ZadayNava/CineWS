@@ -1,4 +1,5 @@
-﻿using CineWS.SalaService;
+﻿using CineWS.GeneroService;
+using CineWS.SalaService;
 using CineWS.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,31 @@ namespace CineWS.Catalogos.Sala
 
             if (!IsPostBack)
             {
-                //voy a insertar
-                Titulo.Text = "Agregar nueva Pelicula";
+                if (Request.QueryString["Id"] != null)
+                {
+                    int id_sala = int.Parse(Request.QueryString["Id"].ToString());
+                    Sala_VO _sala = salaWS.GetSalaxID(id_sala);
+
+                    if (_sala.Id_Sala != null)
+                    {
+                        //Relleno el formulario
+                        Titulo.Text = "Actualizar Sala";
+                        txtNombre.Text = _sala.NomSala.ToString();
+                        txtTipoSala.Text = _sala.TipoSala.ToString();
+                        txtIdAsiento.Text = _sala.Asientos_ID.ToString();
+                    }
+                    else
+                    {
+                        //sweet alert
+                        SweetAlert.Sweet_Alert("Ops...", "No pudimos encontrar el objeto que buscas", "info", this.Page, this.GetType(), "~/Catalogos/Sala/ListadoSala.aspx");
+                    }
+                }
+                else
+                {
+                    //voy a insertar
+                    Titulo.Text = "Agregar nueva Sala";
+
+                }
             }
 
         }
@@ -38,9 +62,20 @@ namespace CineWS.Catalogos.Sala
                 //asigno mis valores del formulario al objeto
                 _sala.NomSala = txtNombre.Text;
                 _sala.TipoSala = txtTipoSala.Text;
-                _sala.Asientos_ID = int.Parse(txtIdAsiento.Text);
-                //voy a insertar
-                respuesta = salaWS.Insert_Sala(_sala);
+                _sala.Asientos_ID = Convert.ToInt32(txtIdAsiento.Text);
+                
+                //valido si voy a insertar o a actualizar
+                if (Request.QueryString["Id"] != null)
+                {
+                    //voy a actualizar
+                    _sala.Id_Sala = int.Parse(Request.QueryString["Id"]);
+                    respuesta = salaWS.UpdateSala(_sala);
+                }
+                else
+                {
+                    //voy a insertar
+                    respuesta = salaWS.Insert_Sala(_sala);
+                }
                 //Preparo mis sweet alert
                 if (respuesta.ToUpper().Contains("ERROR"))
                 {
